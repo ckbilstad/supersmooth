@@ -2,12 +2,221 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Parcel Vanilla App</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="test.scss">
   </head>
-  <body>
-    <h1>Parcel Vanilla App</h1>
-    <p>Edit <code>src/index.html</code> to get started!</p>
-  </body>
+  <body class="fp">
+
+    <div class="top-gradient-1"></div>
+    <div class="top-gradient-2"></div>
+
+<nav class="nav-wrapper">
+  <div class="nav-content">
+    <div class="logo">
+      Supersmooth
+    </div>
+  
+    <div class="links">
+      <a href="#">Historie og filosofi</a>
+      <a href="#">FAQ</a>
+      <a href="#">Kjøp</a>
+    </div>
+  </div>
+
+</nav>
+  
+
+
+<div class="header-wrapper">
+  <div class="content">
+      <h1>Silkemyk hud. <br>Helt naturlig.</h1>
+      <h2>Unik fuktighetskrem med bioaktive ekstrakter fra lav og mose – skapt for å berolige, fukte og beskytte huden med naturens egne overlevelsesevner 🌿</h2>
+
+  </div>
+
+  <div class="rellax a1"
+  data-rellax-xs-speed="0"
+  data-rellax-mobile-speed="0"
+  data-rellax-speed="1">
+    <img src="img/blad.png">
+  </div>
+
+
+  <div class="rellax a2"
+  data-rellax-xs-speed="0"
+  data-rellax-mobile-speed="0"
+  data-rellax-speed="7">
+    <img src="img/blad.png">
+  </div>
+
+
+
+  <div class="rellax a3"
+  data-rellax-xs-speed="0"
+  data-rellax-mobile-speed="0"
+  data-rellax-speed="4">
+    <img src="img/blad.png">
+  </div>
+  
+</div>
+
+
+
+<div class="product-wrapper">
+  <div class="rellax i1"
+  data-rellax-xs-speed="0"
+  data-rellax-mobile-speed="0"
+  data-rellax-speed="1">
+    <div class="glass">🏔️ Snøsmeltet fjellvann for optimal renhet</div>
+  </div>
+
+
+  <div class="rellax i2"
+  data-rellax-xs-speed="0"
+  data-rellax-mobile-speed="0"
+  data-rellax-speed="1">
+    <div class="glass">🏔️ Snøsmeltet fjellvann for optimal renhet</div>
+  </div>
+
+  <div class="rellax i3"
+  data-rellax-xs-speed="0"
+  data-rellax-mobile-speed="0"
+  data-rellax-speed="1">
+    <div class="glass">🏔️ Snøsmeltet fjellvann for optimal renhet</div>
+  </div>
+  
+  <img src="img/product.png">
+
+</div>
+
+
+  <div class="info-section-wrapper">
+    <div class="highlights">
+      <div class="highlight">
+        <img src="img/pg.png">
+        <div class="text">
+          <h2>Overskrift</h2>
+          <p>tekst</p>
+          <button>tekst</button>
+        </div>
+      </div>
+      
+      <div class="highlight reverse">
+        <img src="img/pg.png">
+        <div class="text">
+          <h2>Overskrift</h2>
+          <p>tekst</p>
+          <button>tekst</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="feedback">
+      <div class="person">Tekst</div>
+      <div class="person">Tekst</div>
+      <div class="person">Tekst</div>
+    </div>
+  </div>
+
+
+  <div class="product-summary">
+    <h1>Supersmooth</h1>
+    <img src="img/pg.png">
+    <p>60 ml tube – kr 349</p>
+    <p>Levering i hele Norge</p>
+    <p>Fri frakt over kr 500</p>
+    <button>Kjøp</button>
+  </div>
+
+
+
+  <div class="footer">
+    <h1>Footer</h1>
+  </div>
+
+
+
+<script>
+  const rellax = new Rellax('.rellax', {
+    breakpoints: [544, 1024, 1400],
+  });
+</script>
+
+
+
+
+<script>
+  (function(){
+    function hasClass(el, cls) {
+      if (el.className.match('(?:^|\\s)'+cls+'(?!\\S)')) { return true; } 
+      }
+    function addClass(el, cls) {
+      if (!el.className.match('(?:^|\\s)'+cls+'(?!\\S)')) { el.className += ' '+cls; } 
+      }
+    function delClass(el, cls) {
+      el.className = el.className.replace(new RegExp('(?:^|\\s)'+cls+'(?!\\S)'),'');
+      }
+  
+    function elementFromTop(elemTrigger, elemTarget, classToAdd, distanceFromTop, unit) {
+      var winY = window.innerHeight || document.documentElement.clientHeight, 
+          elTriggerLength = elemTrigger.length, 
+          elTargetLength, distTop, distPercent, distPixels, distUnit, elTarget, i, j;
+      for (i = 0; i < elTriggerLength; ++i) {
+        elTarget = document.querySelectorAll('.'+elemTarget);
+        elTargetLength = elTarget.length;
+        distTop = elemTrigger[i].getBoundingClientRect().top;
+        distPercent = Math.round((distTop / winY) * 100);
+        distPixels = Math.round(distTop);
+        distUnit = unit == 'percent' ? distPercent : distPixels;
+        if (distUnit <= distanceFromTop) {
+          if (!hasClass(elemTrigger[i], elemTarget)) {
+            for (j = 0; j < elTargetLength; ++j) {
+              if (!hasClass(elTarget[j], classToAdd)) { addClass(elTarget[j], classToAdd); }
+              }
+            } else {
+            if (!hasClass(elemTrigger[i], classToAdd)) { addClass(elemTrigger[i], classToAdd); }
+            }
+          } else {
+          delClass(elemTrigger[i], classToAdd);
+          if (!hasClass(elemTrigger[i], elemTarget)) {
+            for (j = 0; j < elTargetLength; ++j) { delClass(elTarget[j], classToAdd); }
+            }
+          }
+        }
+      }
+
+    // params:  trigger element, target element class, classes to add to target element, trigger element distance from top, unit ('percent' or 'pixels')
+    // usage:   elementFromTop(elemTrigger, elemTarget, classToAdd, distanceFromTop, unit);
+  
+    window.addEventListener('scroll', function() {
+                  
+                  elementFromTop(document.querySelectorAll('.info-section-wrapper'),       'fp',       'special',    50, 'percent');
+                  elementFromTop(document.querySelectorAll('.info-section-wrapper'),       'top-gradient-1',       'hide',    50, 'percent');
+                  elementFromTop(document.querySelectorAll('.info-section-wrapper'),       'top-gradient-2',       'show',    50, 'percent');
+                  elementFromTop(document.querySelectorAll('.info-section-wrapper'),       'highlights',       'show',    50, 'percent');
+                  elementFromTop(document.querySelectorAll('.info-section-wrapper'),       'product-wrapper',       'hide',    50, 'percent');
+                  elementFromTop(document.querySelectorAll('.info-section-wrapper'),       'nav-wrapper',       'light',    50, 'percent');
+
+
+
+
+      }, false);
+  
+    window.addEventListener('resize', function() {
+      
+                  elementFromTop(document.querySelectorAll('.info-section-wrapper'),       'ca-text',       'reveal',    100, 'percent');
+
+      }, false);
+  })();
+  </script>
+
+
+
+
+
+</body>
 </html>

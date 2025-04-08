@@ -8,6 +8,7 @@
     "build": "parcel build"
   },
   "dependencies": {
+    "rellax": "^1.12.1",
     "sass": "^1.86.3"
   },
   "devDependencies": {
