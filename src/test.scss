@@ -13,25 +13,16 @@ FONTS
 $font-family-main:'Inter', sans-serif;
 $font-family-heading:'cotta', sans-serif;
 
-$text-xxl: clamp(33px, calc(33px + (80 - 33) * ((100vw - 390px) / (1920 - 390))), 80px);
-$text-xl: clamp(26px, calc(26px + (60 - 26) * ((100vw - 390px) / (1920 - 390))), 60px);
-$text-lg: clamp(22px, calc(22px + (42 - 22) * ((100vw - 390px) / (1920 - 390))), 42px);
-$text-md: clamp(19px, calc(19px + (30 - 19) * ((100vw - 390px) / (1920 - 390))), 30px);
-$text-base: clamp(17px, calc(17px + (25 - 17) * ((100vw - 390px) / (1920 - 390))), 25px);
-$text-sm: clamp(14px, calc(14px + (18 - 14) * ((100vw - 390px) / (1920 - 390))), 18px);
-$text-xs: clamp(12px, calc(12px + (14 - 12) * ((100vw - 390px) / (1920 - 390))), 14px);
-
-
 /*********************
 BREAKPOINTS
 *********************/
 
 @mixin breakpoint($point) {
     @if $point == sm {
-      @media (min-width: 544px) { @content ; } // iphone X og ned
+      @media (min-width: 544px) { @content ; }
    }
      @else if $point == md {
-      @media (min-width: 850px) { @content ; } // iPad og ned
+      @media (min-width: 850px) { @content ; }
    }
    @else if $point == lg {
     @media (min-width: 1024px) { @content ; } 
@@ -54,25 +45,42 @@ H-tags
 *********************/
 
 h1 {
-  font-size: $text-xxl;
+  font-size: 40px;
   font-weight: 400;
   margin: 10px 0;
   font-family: $font-family-heading;
 
   @include breakpoint(lg) {
     margin: 20px 0;
+    font-size: 90px;
+  }
+
+  @include breakpoint(xxl) {
+    font-size: 110px;
   }
 }
 
 h2 {
-  font-size: $text-md;
+  font-size: 25px;
+  font-weight: 400;
+  margin: 10px 0;
+  font-family: $font-family-heading;
+
+  @include breakpoint(lg) {
+    margin: 20px 0;
+    font-size: 50px;
+  }
+}
+
+h3 {
+  font-size: 22px;
   font-weight: 400;
   margin: 10px 0;
   font-family: $font-family-main;
 
   @include breakpoint(lg) {
     margin: 20px 0;
-
+    font-size: 30px;
   }
 }
 
@@ -91,6 +99,11 @@ body {
   background-color: #F4F2EF;
   font-family: $font-family-main;
   transition: background .6s ease-in-out;
+  font-size: 18px;
+
+  @include breakpoint(lg) {
+    font-size: 20px;
+  }
 
   &.special {
     background-color: #283A27;
@@ -117,7 +130,7 @@ h1 {
 
 
   .content {
-    max-width: 700px;
+    max-width: 900px;
   }
 
   .a1 {
@@ -178,7 +191,7 @@ h1 {
     top: 90%;
     z-index: 10;
   }
-
+}
 
 .glass {
   padding: 40px;
@@ -187,8 +200,6 @@ h1 {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
 }
 
 
@@ -213,11 +224,6 @@ h1 {
   
       @include breakpoint(md) {
         grid-template-columns: 1fr 1fr;
-      }
-
-      &.reverse {
-        direction: rtl;
-        text-align: left;
       }
     }
   }
@@ -246,23 +252,27 @@ h1 {
 .nav-wrapper {
   width: 100%;
   position: fixed;
-  top: 0;
-  z-index: 12;
+  top: 12px;
+  z-index: 11;
 
   .nav-content {
-    max-width: 1400px;
+    max-width: 800px;
     margin: auto;
-    padding: 12px 16px;
+    padding: 12px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-radius: 200px;
 
     .logo {
       font-family: $font-family-heading;
-      font-size: 40px;
+      font-size: 16px;
+
+      @include breakpoint(md) {
+        font-size: 40px;
+      }
     }
     .links {
-      font-size: $text-md;
       gap: 40px;
       display: flex;
       color: black;
@@ -275,6 +285,9 @@ h1 {
     }
   }
 }
+
+
+
 
 // Gradient i topp
 .top-gradient-1 {
