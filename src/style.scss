@@ -108,6 +108,23 @@ body {
 
   &.special {
     background-color: #283A27;
+    color: white;
+
+    h1 {
+      color: white;
+    }
+
+    .nav-wrapper {
+      color: white;
+
+      a {
+        color: white;
+      }
+  
+      .burger span {
+        background: white;
+      }
+    }
   }
 
   a {
@@ -117,6 +134,15 @@ body {
 
 h1 {
   font-family: 'cotta', sans-serif;
+}
+
+
+
+.page-hero-wrapper {
+  margin: 20vh auto;
+  padding: 0 16px;
+  max-width: 900px;
+  text-align: center;
 }
 
 
@@ -332,61 +358,10 @@ h1 {
       }
     }
   }
-
-  &.light {
-    color: white;
-
-    a {
-      color: white;
-    }
-
-    .burger span {
-      background: white;
-    }
-  }
 }
 
 
 
-
-
-
-
-
-// Gradient i topp
-.top-gradient-1 {
-  position: fixed;
-  height: 60px;
-  width: 100%;
-  top: 0;
-  left: 50%;
-  opacity: 1;
-  z-index: 11;
-  transform: translate(-50%, 0%);
-  background: linear-gradient(#F4F2EF 0%, #ffffff00 100%);
-  transition: .6s all;
-
-  @include breakpoint(md) {
-    height: 80px;
-  }
-}
-
-.top-gradient-2 {
-  position: fixed;
-  height: 60px;
-  width: 100%;
-  top: 0;
-  left: 50%;
-  z-index: 11;
-  transform: translate(-50%, 0%);
-  background: linear-gradient(#283A27 0%, #ffffff00 100%);
-  transition: .6s all;
-  opacity: 0;
-
-  @include breakpoint(md) {
-    height: 80px;
-  }
-}
 
 
 
