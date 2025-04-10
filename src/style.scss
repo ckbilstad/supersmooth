@@ -296,7 +296,7 @@ h1 {
     margin: auto;
     padding: 0 16px;
     display: grid;
-    gap: 10vh;
+    gap: 20px;
     opacity: 0;
     transition: .6s all;
 
@@ -309,6 +309,16 @@ h1 {
       @include breakpoint(md) {
         grid-template-columns: 1fr 1fr;
       }
+
+      img {
+        border-radius: 12px;
+      }
+
+      .text {
+        p {
+          margin-bottom: 20px;
+        }
+      }
     }
   }
 
@@ -318,16 +328,28 @@ h1 {
     grid-template-columns: 1fr;
     max-width: 1200px;
     margin: 20vh auto;
-    gap: 12px;
+    gap: 8px;
+    padding: 0 16px;
 
     @include breakpoint(md) {
       grid-template-columns: 1fr 1fr 1fr;
     }
 
     .person {
-      background-color: #1D2C1D;
-      padding: 12px 24px;
+      background-color: #384d37;
+      padding: 20px;
       border-radius: 12px;
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 90px;
+        height: 90px;
+        border-radius: 200px;
+      }
     }
   }
 
@@ -437,7 +459,7 @@ h1 {
     }
 
     .product {
-      background-color: #1D2D1C;
+      background-color: #384d37;
       border-radius: 12px;
 
       img {
