@@ -163,30 +163,59 @@ h1 {
 
   .a1 {
     position: absolute;
-    right: 76vw;
-    top: -5vh;
+    left: 3vw;
+    top: -13vh;
     filter: blur(5px);
+    z-index: -1;
+
+    img {
+      width: 80px;
+    }
+
+    @include breakpoint(lg) {
+      left: 10vw;
+      top: -5vh;
+
+      img {
+        width: 120px;
+      }
+    }
+  }
+
+  .a2 {
+    position: absolute;
+    right: 0;
+    top: 30vh;
+    z-index: -1;
 
     img {
       width: 120px;
     }
-  }
-  .a2 {
-    position: absolute;
-    left: 75vw;
 
-    img {
-      width: 220px;
+    @include breakpoint(lg) {
+      position: absolute;
+      right: 2vw;
+      top: 10vh;
+
+      img {
+        width: 220px;
+      }
     }
   }
   .a3 {
     position: absolute;
-    left: 75vw;
-    top: 120vh;
+    left: 7vw;
+    top: 90vh;
     filter: blur(5px);
+    z-index: -1;
     
     img {
       width: 90px;
+    }
+
+    @include breakpoint(lg) {
+      left: 35vw;
+      top: 120vh;
     }
   }
 }
@@ -194,30 +223,44 @@ h1 {
 .product-wrapper {
   width: 100%;
   margin: 20vh auto;
+  padding: 0 16px;
   display: grid;
+  gap: 8px;
   justify-content: center;
   position: relative;
   transition: .6s all;
 
+  .focus {
+    background-color: #D7EBD6;
+    padding: 40px;
+    border-radius: 12px;
+  }
+
   .i1 {
-    position: absolute;
-    left: 45%;
-    top: 0;
-    z-index: 10;
+    @include breakpoint(md) {
+      position: absolute;
+      right: 20%;
+      top: 0;
+      z-index: 10;
+    }
   }
 
   .i2 {
-    position: absolute;
-    left: 30%;
-    top: 50%;
-    z-index: 10;
+    @include breakpoint(md) {
+      position: absolute;
+      left: 19%;
+      top: 45%;
+      z-index: 10;
+    }
   }
 
   .i3 {
-    position: absolute;
-    left: 45%;
-    top: 90%;
-    z-index: 10;
+    @include breakpoint(md) {
+      position: absolute;
+      right: 23%;
+      top: 85%;
+      z-index: 10;
+    }
   }
 }
 
@@ -239,12 +282,14 @@ h1 {
   position: absolute;
   top: 0;
   transform: translateY(-500px);
+  z-index: -2;
 }
 
 
 .info-section-wrapper {
   color: white;
   transition: .6s all;
+  margin: 20vh auto;
 
   .highlights {
     max-width: 1200px;
@@ -379,9 +424,35 @@ h1 {
   max-width: 1200px;
   margin: auto;
   color: white;
+  padding: 0 16px;
+  margin: 20vh auto;
 
-  img {
-    width: 500px;
+  .products {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+
+    @include breakpoint(md) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .product {
+      background-color: #1D2D1C;
+      border-radius: 12px;
+
+      img {
+        border-radius: 12px 12px 0 0;
+      }
+
+      .content {
+        padding: 24px;
+        text-align: center;
+
+        h3 {
+          margin: 0 0 24px 0;
+        }
+      }
+    }
   }
 }
 
