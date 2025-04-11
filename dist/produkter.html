@@ -6,6 +6,8 @@
     <title>Produkter - Supersmooth</title>
   
     <link rel="stylesheet" href="/supersmooth.b2d9cf43.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
   </head>
   <body class="special">
 
@@ -31,9 +33,39 @@
 
   
   <div class="page-hero-wrapper">
-    <h1>Produkter</h1>
-    <a href="/produkter/eliksir.html">eliksir</a>
+    <h1 class="ml12">Produkter</h1>
   </div>
+
+
+  <div class="product-summary">
+  <div class="products">
+
+    <div class="product">
+      <img src="/eliksir.330cc3e0.png">
+      <div class="content">
+        <h3>Eliksir</h3>
+        <a href="/produkter/eliksir.html" class="c-btn"><span class="c-btn__label">Se mer</span></a>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="/eliksir.330cc3e0.png">
+      <div class="content">
+        <h3>Hudkrem</h3>
+        <a href="/produkter/eliksir.html" class="c-btn"><span class="c-btn__label">Se mer</span></a>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="/eliksir.330cc3e0.png">
+      <div class="content">
+        <h3>Parfyme</h3>
+        <a href="/produkter/eliksir.html" class="c-btn"><span class="c-btn__label">Se mer</span></a>
+      </div>
+    </div>
+
+  </div>
+</div>
 
 
   <div class="footer light">
@@ -52,7 +84,27 @@
     </div>
   </div>
 
+<script>var textWrapper = document.querySelector('.ml12');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+anime.timeline({
+    loop: false
+}).add({
+    targets: '.ml12 .letter',
+    translateX: [
+        40,
+        0
+    ],
+    translateZ: 0,
+    opacity: [
+        0,
+        1
+    ],
+    easing: "easeOutExpo",
+    duration: 4000,
+    delay: (el, i)=>500 + 30 * i
+});
 
+</script>
 
 <script src="/produkter.a6243988.js"></script></body>
 </html>
