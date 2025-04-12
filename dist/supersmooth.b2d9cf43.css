@@ -342,8 +342,28 @@ h1 {
 
 @media (width >= 850px) {
   .nav-wrapper .nav-content .logo {
-    font-size: 40px;
+    font-size: 35px;
   }
+}
+
+.nav-wrapper .nav-content .logo a {
+  align-items: center;
+  gap: 12px;
+  transition: all .3s;
+  display: flex;
+}
+
+.nav-wrapper .nav-content .logo a img {
+  max-width: 35px;
+  transition: all .3s;
+}
+
+.nav-wrapper .nav-content .logo a:hover {
+  opacity: .6;
+}
+
+.nav-wrapper .nav-content .logo a:hover img {
+  transform: rotate(-12deg);
 }
 
 .nav-wrapper .nav-content .links {

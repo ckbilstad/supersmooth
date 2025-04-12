@@ -384,7 +384,26 @@ h1 {
       font-size: 26px;
 
       @include breakpoint(md) {
-        font-size: 40px;
+        font-size: 35px;
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        transition: .3s all;
+
+        img {
+          max-width: 35px;
+          transition: .3s all;
+        }
+
+        &:hover {
+          opacity: .6;
+          img {
+            transform: rotate(-12deg);
+          }
+        }
       }
     }
 
