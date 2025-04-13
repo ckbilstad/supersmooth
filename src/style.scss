@@ -422,12 +422,28 @@ h1 {
       }
 
       a {
+        position: relative;
+        text-decoration: none;
+
           &:hover {
             @include breakpoint(md) {
               animation: jello;
               animation-duration: 1.2s;
             }
           }
+      }
+
+      .active::after {
+          content: "";
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: -12px; /* Justér avstanden under teksten */
+          width: 6px;
+          height: 6px;
+          background-color: #D7EBD6;
+          border-radius: 50%;
+        
       }
     }
 
@@ -690,10 +706,4 @@ img {
     max-width: 700px;
     margin: auto;
   }
-}
-
-
-.ml12 .letter, .ml13 .letter  {
-  display: inline-block;
-  line-height: 1em;
 }

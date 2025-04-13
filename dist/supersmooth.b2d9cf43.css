@@ -382,10 +382,29 @@ h1 {
     gap: 40px;
     display: flex;
   }
+}
 
+.nav-wrapper .nav-content .links a {
+  text-decoration: none;
+  position: relative;
+}
+
+@media (width >= 850px) {
   .nav-wrapper .nav-content .links a:hover {
     animation: 1.2s jello;
   }
+}
+
+.nav-wrapper .nav-content .links .active:after {
+  content: "";
+  background-color: #d7ebd6;
+  border-radius: 50%;
+  width: 6px;
+  height: 6px;
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .nav-wrapper .nav-content a {
@@ -623,10 +642,5 @@ img {
   grid-column: 1 / -1;
   max-width: 700px;
   margin: auto;
-}
-
-.ml12 .letter, .ml13 .letter {
-  line-height: 1em;
-  display: inline-block;
 }
 /*# sourceMappingURL=supersmooth.b2d9cf43.css.map */
