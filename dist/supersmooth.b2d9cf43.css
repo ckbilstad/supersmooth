@@ -75,6 +75,10 @@ body {
   }
 }
 
+body b {
+  font-weight: 500;
+}
+
 body.special {
   color: #fff;
   background-color: #283a27;
@@ -103,8 +107,14 @@ h1 {
 .page-hero-wrapper {
   text-align: center;
   max-width: 900px;
-  margin: 20vh auto;
+  margin: 130px auto 70px;
   padding: 0 16px;
+}
+
+@media (width >= 850px) {
+  .page-hero-wrapper {
+    margin: 160px auto 60px;
+  }
 }
 
 .header-wrapper {
@@ -328,7 +338,7 @@ h1 {
 }
 
 .nav-wrapper .nav-content {
-  border-radius: 200px;
+  border-radius: 12px;
   grid-template-columns: auto auto;
   justify-content: space-between;
   align-items: center;
@@ -337,6 +347,12 @@ h1 {
   padding: 8px 40px;
   display: grid;
   position: relative;
+}
+
+@media (width >= 850px) {
+  .nav-wrapper .nav-content {
+    border-radius: 200px;
+  }
 }
 
 .nav-wrapper .nav-content .logo {
@@ -446,7 +462,7 @@ h1 {
   }
 }
 
-.product-summary {
+.all-products {
   color: #fff;
   max-width: 1400px;
   margin: 20vh auto;
@@ -454,34 +470,42 @@ h1 {
   transition: all .3s;
 }
 
-.product-summary .products {
+.all-products.pp {
+  margin: 0 auto 20vh;
+}
+
+.all-products .products {
   grid-template-columns: 1fr;
   gap: 24px;
   display: grid;
 }
 
 @media (width >= 850px) {
-  .product-summary .products {
+  .all-products .products {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
-.product-summary .products .product {
+.all-products .products .product {
   background-color: #384d37;
   border-radius: 12px;
 }
 
-.product-summary .products .product img {
+.all-products .products .product img {
   border-radius: 12px 12px 0 0;
 }
 
-.product-summary .products .product .content {
+.all-products .products .product .content {
   text-align: center;
   padding: 24px;
 }
 
-.product-summary .products .product .content h3 {
+.all-products .products .product .content h3 {
   margin: 0 0 24px;
+}
+
+.all-products .products .product.coming {
+  opacity: .4;
 }
 
 *, :before, :after {
@@ -607,7 +631,7 @@ img {
   align-items: center;
   gap: 20px;
   max-width: 1400px;
-  margin: 20vh auto;
+  margin: 76px auto 20vh;
   padding: 0 16px;
   display: grid;
 }
@@ -616,6 +640,7 @@ img {
   .product-page-wrapper {
     grid-template-columns: 1fr 1fr;
     gap: 60px;
+    margin: 112px auto 20vh;
   }
 }
 

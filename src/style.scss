@@ -107,6 +107,10 @@ body {
     font-size: 22px;
   }
 
+  b {
+    font-weight: 500;
+  }
+
   &.special {
     background-color: #283A27;
     color: white;
@@ -144,10 +148,14 @@ h1 {
 
 
 .page-hero-wrapper {
-  margin: 20vh auto;
+  margin: 130px auto 70px auto;
   padding: 0 16px;
   max-width: 900px;
   text-align: center;
+
+  @include breakpoint(md) {
+    margin: 160px auto 60px auto;
+  }
 }
 
 
@@ -380,8 +388,13 @@ h1 {
     grid-template-columns: auto auto;
     justify-content: space-between;
     align-items: center;
-    border-radius: 200px;
+    border-radius: 12px;
     position: relative;
+
+    @include breakpoint(md) {
+      border-radius: 200px;
+    }
+
 
     .logo {
       font-family: $font-family-heading;
@@ -488,13 +501,17 @@ h1 {
 
 
 
-.product-summary {
+.all-products {
   transition: .3s all;
   max-width: 1400px;
   margin: auto;
   color: white;
   padding: 0 16px;
   margin: 20vh auto;
+
+  &.pp {
+    margin: 0 auto 20vh auto;
+  }
 
   .products {
     display: grid;
@@ -520,6 +537,10 @@ h1 {
         h3 {
           margin: 0 0 24px 0;
         }
+      }
+
+      &.coming {
+        opacity: .4;
       }
     }
   }
@@ -665,7 +686,7 @@ img {
 
 .product-page-wrapper {
   max-width: 1400px;
-  margin: 20vh auto;
+  margin: 76px auto 20vh auto;
   padding: 0 16px;
   display: grid;
   grid-template-columns: 1fr;
@@ -675,6 +696,7 @@ img {
   @include breakpoint(md) {
     grid-template-columns: 1fr 1fr;
     gap: 60px;
+    margin: 112px auto 20vh auto;
   }
 
   img {
