@@ -389,12 +389,6 @@ h1 {
   position: relative;
 }
 
-@media (width >= 850px) {
-  .nav-wrapper .nav-content .links a:hover {
-    animation: 1.2s jello;
-  }
-}
-
 .nav-wrapper .nav-content .links .active:after {
   content: "";
   background-color: #d7ebd6;
@@ -402,9 +396,16 @@ h1 {
   width: 6px;
   height: 6px;
   position: absolute;
-  bottom: -12px;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 7px;
+  left: -16px;
+}
+
+@media (width >= 850px) {
+  .nav-wrapper .nav-content .links .active:after {
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .nav-wrapper .nav-content a {
