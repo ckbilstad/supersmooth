@@ -88,6 +88,10 @@ body.special .nav-wrapper .burger span {
   background: #fff;
 }
 
+body.special .nav-wrapper img {
+  filter: invert();
+}
+
 body a {
   color: #000;
 }
@@ -358,12 +362,10 @@ h1 {
   transition: all .3s;
 }
 
-.nav-wrapper .nav-content .logo a:hover {
-  opacity: .6;
-}
-
-.nav-wrapper .nav-content .logo a:hover img {
-  transform: rotate(-12deg);
+@media (width >= 850px) {
+  .nav-wrapper .nav-content .logo a img {
+    max-width: 45px;
+  }
 }
 
 .nav-wrapper .nav-content .links {
@@ -384,6 +386,14 @@ h1 {
   .nav-wrapper .nav-content .links a:hover {
     animation: 1.2s jello;
   }
+}
+
+.nav-wrapper .nav-content a {
+  transition: all .3s;
+}
+
+.nav-wrapper .nav-content a:hover {
+  opacity: .6;
 }
 
 .nav-wrapper .nav-content .menu-toggle {

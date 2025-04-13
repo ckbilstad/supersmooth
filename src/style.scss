@@ -125,6 +125,10 @@ body {
       .burger span {
         background: white;
       }
+
+      img {
+        filter: invert(1);
+      }
     }
   }
 
@@ -396,12 +400,9 @@ h1 {
         img {
           max-width: 35px;
           transition: .3s all;
-        }
 
-        &:hover {
-          opacity: .6;
-          img {
-            transform: rotate(-12deg);
+          @include breakpoint(md) {
+            max-width: 45px;
           }
         }
       }
@@ -427,6 +428,13 @@ h1 {
               animation-duration: 1.2s;
             }
           }
+      }
+    }
+
+    a {
+      transition: .3s all;
+      &:hover {
+        opacity: .6;
       }
     }
 

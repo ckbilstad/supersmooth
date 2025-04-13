@@ -6,9 +6,6 @@
     <title>Supersmooth</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <link rel="stylesheet" href="/supersmooth.b2d9cf43.css">
   </head>
   <body class="fp">
@@ -19,7 +16,7 @@
 
     <nav class="nav-wrapper">
       <div class="nav-content glass">
-        <div class="logo"><a href="/index.html"><img src="/logomark.85f92d2b.svg">Supersmooth</a></div>
+        <div class="logo"><a href="/index.html"><img src="/symbol.882dba61.svg">Supersmooth</a></div>
     
         <input type="checkbox" id="menu-toggle" class="menu-toggle">
         <label for="menu-toggle" class="burger">
@@ -220,56 +217,14 @@
         elementFromTop(document.querySelectorAll('.info-section-wrapper'), 'nav-wrapper', 'light', 50, 'percent');
     }, false);
     window.addEventListener('resize', function() {
-        elementFromTop(document.querySelectorAll('.info-section-wrapper'), 'ca-text', 'reveal', 100, 'percent');
+        elementFromTop(document.querySelectorAll('.info-section-wrapper'), 'fp', 'special', 50, 'percent');
+        elementFromTop(document.querySelectorAll('.info-section-wrapper'), 'highlights', 'show', 50, 'percent');
+        elementFromTop(document.querySelectorAll('.info-section-wrapper'), 'product-wrapper', 'hide', 50, 'percent');
+        elementFromTop(document.querySelectorAll('.info-section-wrapper'), 'nav-wrapper', 'light', 50, 'percent');
     }, false);
 })();
 
 </script>
-
-<script>// JS for that hero text effect
-var textWrapper = document.querySelector('.ml12');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-anime.timeline({
-    loop: false
-}).add({
-    targets: '.ml12 .letter',
-    translateX: [
-        40,
-        0
-    ],
-    translateZ: 0,
-    opacity: [
-        0,
-        1
-    ],
-    easing: "easeOutExpo",
-    duration: 4000,
-    delay: (el, i)=>500 + 30 * i
-});
-// JS for that hero text effect (linje 2)
-var textWrapper = document.querySelector('.ml13');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-anime.timeline({
-    loop: false,
-    delay: 1000
-}).add({
-    targets: '.ml13 .letter',
-    translateX: [
-        40,
-        0
-    ],
-    translateZ: 0,
-    opacity: [
-        0,
-        1
-    ],
-    easing: "easeOutExpo",
-    duration: 4000,
-    delay: (el, i)=>500 + 30 * i
-});
-
-</script>
-
 
 
 <script src="/supersmooth.59712999.js"></script></body>
