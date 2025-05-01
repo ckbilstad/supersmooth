@@ -50,14 +50,15 @@ h1 {
   margin: 10px 0;
   font-family: $font-family-heading;
   color: #283A27;
+  
 
   @include breakpoint(lg) {
     margin: 20px 0;
-    font-size: 90px;
+    font-size: 80px;
   }
 
   @include breakpoint(xxl) {
-    font-size: 110px;
+    font-size: 90px;
   }
 }
 
