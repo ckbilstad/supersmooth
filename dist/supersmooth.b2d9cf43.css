@@ -168,7 +168,7 @@ h1 {
   filter: blur(5px);
   z-index: -1;
   position: absolute;
-  top: -13vh;
+  top: 30px;
   left: 3vw;
 }
 
@@ -190,7 +190,7 @@ h1 {
 .header-wrapper .a2 {
   z-index: -1;
   position: absolute;
-  top: 30vh;
+  top: 60vh;
   right: 0;
 }
 
@@ -238,6 +238,19 @@ h1 {
   transition: all .3s;
   display: grid;
   position: relative;
+  overflow: hidden;
+}
+
+.product-wrapper img {
+  width: 200%;
+  transform: translate(-50vw);
+}
+
+@media (width >= 850px) {
+  .product-wrapper img {
+    width: 100%;
+    transform: translate(0);
+  }
 }
 
 .product-wrapper .focus {
@@ -264,7 +277,7 @@ h1 {
   .product-wrapper .i3 {
     z-index: 10;
     position: absolute;
-    top: 85%;
+    top: 82%;
     right: 23%;
   }
 }
