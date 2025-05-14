@@ -716,6 +716,7 @@ img {
   aspect-ratio: 1;
   object-fit: cover;
   border-radius: 12px;
+  max-height: 520px;
 }
 
 .product-page-wrapper .info {
